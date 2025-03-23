@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var playButton = document.getElementById('play');  // 'play' ID를 가진 버튼 찾기
+
+  // 음악 객체 생성
+  var audio = new Audio('https://unicornycle.github.io/StarblastModding/inostar.mp3');
+  audio.loop = true;  // 음악 반복 재생 설정
+
+  if (playButton) {
+    // 버튼이 있으면 클릭 이벤트 리스너 추가
+    playButton.addEventListener('click', function() {
+      console.log("게임 시작 버튼 클릭됨!");
+      audio.play();  // 음악 실행
+      console.log("🎵 음악이 실행되었습니다!");
+    });
+  } else {
+    console.log("게임 시작 버튼을 찾을 수 없습니다.");
+  }
+});
